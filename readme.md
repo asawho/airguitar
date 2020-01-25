@@ -34,5 +34,10 @@ pip install pandas
 
 Systemd Setup to have it Auto-Start
 ```
-
+sudo cp airguitar.service /etc/systemd/system
+sudo systemctl daemon-reload
+sudo systemctl enable airguitar
+sudo systemctl start airguitar
+#See what it is doing
+sudo journalctl -u airguitar.service
 ```

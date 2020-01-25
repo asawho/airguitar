@@ -194,6 +194,6 @@ class RiffGame():
 #Startup the game
 #scp riffs\*.wav pi@raspberrypi:/home/pi/air/riffs
 #sudo amixer cset numid=1 100%
-game=RiffGame(False)
+game=RiffGame(True)
 game.play()
 game.shutdown()
