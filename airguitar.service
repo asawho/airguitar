@@ -7,9 +7,6 @@
 Description=airguitar
 
 [Service]
-Type = simple
-Environment="DISPLAY=:0"
-Environment="XAUTHORITY=/home/pi/.Xauthority"
 WorkingDirectory=/home/pi/airguitar
 ExecStart=/home/pi/airguitar/venv/bin/python /home/pi/airguitar/riff.py
 
