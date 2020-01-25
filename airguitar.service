@@ -1,0 +1,17 @@
+# sudo cp airguitar.service /etc/systemd/system
+# sudo systemctl daemon-reload
+# sudo systemctl enable airguitar
+# sudo systemctl start airguitar
+
+[Unit]
+Description=airguitar
+
+[Service]
+Type = simple
+Environment="DISPLAY=:0"
+Environment="XAUTHORITY=/home/pi/.Xauthority"
+WorkingDirectory=/home/pi/airguitar
+ExecStart=/home/pi/airguitar/venv/bin/python /home/pi/airguitar/riff.py
+
+[Install]
+WantedBy=multi-user.target
